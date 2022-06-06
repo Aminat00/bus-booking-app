@@ -1,0 +1,11 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.header {
+	background-image: url('/src/images/bg.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 730px;
+}
