@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@mui/material/styles';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import Header from './components/Header';
-import MainContainer from './App';
+
+import MainContainer from './MainContainer';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+// 	<React.StrictMode>
+// 		<MainContainer />
+// 	</React.StrictMode>
+// );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<MainContainer />
+		<BrowserRouter>
+			<MainContainer />
+		</BrowserRouter>
 	</React.StrictMode>
 );
