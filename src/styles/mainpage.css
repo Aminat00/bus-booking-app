@@ -12,16 +12,32 @@
 	text-align: center;
 }
 
-.header .row {
-	margin-left: 15%;
-	margin-top: 20%;
+.header .row_header {
+	text-align: center;
+	margin: 20% 0;
+	padding-left: 20%;
 }
 
-.header .row .col {
+.header .row_header .col {
 	display: inline-block;
 }
 
 .datePicker {
 	height: 80%;
 	background-color: tomato;
+}
+.card_container {
+	background-color: rgba(44, 130, 176, 0.57);
+	width: 100%;
+	height: 90%;
+	padding: 5%;
+}
+
+.card {
+	margin: 0 2%;
+	padding: 0 3%;
+}
+
+.toproutes {
+	padding: 2%;
 }

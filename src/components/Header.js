@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/header.css';
+import '../styles/mainpage.css';
 import ResponsiveAppBar from '../mui_components/MenuBar';
 
 import { Container, Row, Col } from 'react-bootstrap';
