@@ -4,8 +4,24 @@
 }
 
 .header {
+	width: 100%;
 	background-image: url('/src/images/bg.jpg');
 	background-position: center;
 	background-size: cover;
 	height: 730px;
+	text-align: center;
+}
+
+.header .row {
+	margin-left: 15%;
+	margin-top: 20%;
+}
+
+.header .row .col {
+	display: inline-block;
+}
+
+.datePicker {
+	height: 80%;
+	background-color: tomato;
 }

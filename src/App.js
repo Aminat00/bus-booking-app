@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { StyledEngineProvider } from '@mui/material/styles';
-import ResponsiveAppBar from './components/MenuBar';
+import { Container } from 'react-bootstrap';
+import Header from './components/Header';
+import Offers from './components/Offers';
 
-function App() {
-	return <div className='App'></div>;
+export default function MainContainer() {
+	return (
+		<div className='Maindiv'>
+			<Header />
+			<Offers />
+		</div>
+	);
 }
-
-export default App;
