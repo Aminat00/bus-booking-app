@@ -6,6 +6,7 @@ import '../styles/mainpage.css';
 function TopRoutes() {
 	return (
 		<div className='toproutes'>
+			<h2>Top Cities and Routes</h2>
 			<Tabs defaultActiveKey='profile' id='uncontrolled-tab-example' className='mb-3'>
 				<Tab eventKey='home' title='Top Cities'>
 					<Container className='toproutes_container'>

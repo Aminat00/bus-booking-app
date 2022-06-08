@@ -27,10 +27,14 @@
 	background-color: tomato;
 }
 .card_container {
-	background-color: rgba(44, 130, 176, 0.57);
+	background-color: rgba(6, 95, 173, 0.605);
 	width: 100%;
 	height: 90%;
 	padding: 5%;
+	text-align: center;
+}
+.card_container h2 {
+	padding-bottom: 3%;
 }
 
 .card {
@@ -39,5 +43,15 @@
 }
 
 .toproutes {
-	padding: 2%;
+	text-align: center;
+	padding: 5%;
+}
+
+.toproutes .toproutes_container li {
+	list-style: none;
+}
+
+.footer {
+	background-color: rgba(6, 95, 173, 0.605);
+	padding: 5%;
 }
