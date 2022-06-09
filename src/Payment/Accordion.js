@@ -6,6 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Radio } from '@mui/material';
+import CardPayment from './CardPayment';
 export default function ControlledAccordions() {
 	const [current, setCurrent] = useState(-1);
 	const changeState = (panel) => (e, newValue) => {
@@ -24,7 +25,9 @@ export default function ControlledAccordions() {
 					</Typography>
 				</AccordionSummary>
 				<AccordionDetails>
-					<Typography>Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget maximus est, id dignissim quam.</Typography>
+					<Typography>
+						<CardPayment />
+					</Typography>
 				</AccordionDetails>
 			</Accordion>
 			<Accordion expanded={current === 1} onChange={changeState(1)}>

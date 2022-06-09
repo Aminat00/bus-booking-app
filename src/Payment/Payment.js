@@ -24,7 +24,24 @@ function Payment() {
 						<PaperPayment />
 					</Col>
 					<Col xs={6} md={4}>
-						<h5>Your Booking</h5>
+						<h3>Your Booking</h3>
+						<Row>Date</Row>
+						<Row>
+							<Col>Depart time</Col>
+							<Col>Station</Col>
+						</Row>
+						<Row>
+							<Col>Arrive time</Col>
+							<Col>Station</Col>
+						</Row>
+						<Row>
+							<Col>
+								<strong>Total</strong>
+							</Col>
+							<Col>
+								<strong>66.99</strong>
+							</Col>
+						</Row>
 					</Col>
 				</Row>
 			</Container>
