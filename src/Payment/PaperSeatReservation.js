@@ -18,18 +18,18 @@ export default function Reservation() {
 					height: 128,
 				},
 			}}>
-			<Paper style={{ width: '100%', padding: '2%' }} variant='outlined' elevation={3}>
+			<Paper style={{ width: '100%', padding: '2%', height: 'auto' }} variant='outlined' elevation={3}>
 				<h4>Seat Resevation</h4>
-				<Button variant='contained' sx={{ height: '100%', backgroundColor: '#c40a0abf', width: '100%', borderRadius: 0 }}>
+				<Button variant='text' style={{ display: 'inline-block' }}>
 					<Row style={{ border: '1px solid darkgray', margin: '10px' }}>
-						<Col>
+						<Col xs={2} md={3}>
 							<FlightClassTwoToneIcon style={{ width: '50px', height: '50px' }} />
 						</Col>
-						<Col xs={12} md={8} style={{ textAlign: 'center', margin: '10px' }}>
+						<Col xs={4} md={3} style={{ textAlign: 'center', margin: '15px' }}>
 							<strong>Select your Seat</strong>
 						</Col>
-						<Col>
-							<ArrowForwardIosTwoToneIcon style={{ padding: '10px 0 10px 50px', width: '50px', height: '50px' }} color='action' />
+						<Col xs={2} md={3}>
+							<ArrowForwardIosTwoToneIcon style={{ width: '30px', height: '30px', margin: '10px 0 10px 25px' }} color='action' />
 						</Col>
 					</Row>
 				</Button>

@@ -4,6 +4,7 @@ import Button from 'mui-react/lib/components/Button';
 import { Container, Col, Row } from 'react-bootstrap';
 import SimplePaper from './PaperPassengers';
 import Reservation from './PaperSeatReservation';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 function Payment() {
 	return (
@@ -12,7 +13,9 @@ function Payment() {
 			<Container style={{ padding: '3%' }}>
 				<Row>
 					<Col xs={12} md={8}>
-						<Button variant='text'>Back</Button>
+						<Button variant='text'>
+							<ArrowBackIosIcon /> Back
+						</Button>
 						<SimplePaper />
 						<Reservation />
 					</Col>
