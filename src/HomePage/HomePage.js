@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Footer from './Footer';
+import Offers from './Offers';
 import TopRoutes from './TopRoutes';
 import Footer from './Footer';
 

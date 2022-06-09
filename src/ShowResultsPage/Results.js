@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 function Results() {
 	return (
@@ -53,8 +54,8 @@ function Results() {
 				</Col>
 				<Col>
 					<p>10 seats available</p>
-					<Button sx={{ height: '30%', fontSize: '100%', backgroundColor: '#c40a0abf', width: '100%', borderRadius: 10 }} variant='contained'>
-						Search
+					<Button sx={{ height: '30%', fontSize: '100%', backgroundColor: '#c40a0abf', width: '100%', borderRadius: 3 }} variant='contained'>
+						<Link to='/Payment'>Reserve a seat</Link>{' '}
 					</Button>
 				</Col>
 			</Row>

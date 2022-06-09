@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import InputWithIconFrom from './TextfieldFrom';
 import InputWithIconTo from './TextFieldTo';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 import BasicDatePicker from './date';
 
@@ -44,7 +45,8 @@ export default function FullWidthGrid() {
 				</Grid>
 				<Grid item xs={2} md={2} className='col'>
 					<Button sx={{ height: '100%', fontSize: '100%', backgroundColor: '#c40a0abf', width: '100%', borderRadius: 0 }} variant='contained'>
-						Search
+						{' '}
+						<Link to='/ShowResultMain'>Search</Link>
 					</Button>
 				</Grid>
 			</Grid>

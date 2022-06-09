@@ -1,22 +1,16 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainContainer from './MainContainer';
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-// 	<React.StrictMode>
-// 		<MainContainer />
-// 	</React.StrictMode>
-// );
+import Payment from './Payment/Payment';
+import ShowResultMain from './ShowResultsPage/ShowResultMain';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<MainContainer />
-		</BrowserRouter>
-	</React.StrictMode>
+	<BrowserRouter>
+		<Routes>
+			<Route path='/' element={<MainContainer />} />
+			<Route path='ShowResultMain' element={<ShowResultMain />} />
+			<Route path='Payment' element={<Payment />} />
+		</Routes>
+	</BrowserRouter>
 );
