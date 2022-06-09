@@ -5,6 +5,8 @@ import { Container, Col, Row } from 'react-bootstrap';
 import SimplePaper from './PaperPassengers';
 import Reservation from './PaperSeatReservation';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import Contact from './PaperContact';
+import PaperPayment from './PaperPayment';
 
 function Payment() {
 	return (
@@ -18,6 +20,8 @@ function Payment() {
 						</Button>
 						<SimplePaper />
 						<Reservation />
+						<Contact />
+						<PaperPayment />
 					</Col>
 					<Col xs={6} md={4}>
 						<h5>Your Booking</h5>
