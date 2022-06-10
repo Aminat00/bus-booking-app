@@ -1,0 +1,24 @@
+.total {
+	font-size: 20px;
+}
+
+.total .payment {
+	height: auto;
+	position: fixed;
+	width: 25%;
+}
+
+.total .payment h3 {
+	text-align: center;
+}
+.total .payment .col_right {
+	text-align: end;
+}
+
+.total .payment .row {
+	margin: 5% 0;
+}
+
+.total .payment .arrive_row {
+	margin-top: 10%;
+}

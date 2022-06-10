@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Form } from 'react-bootstrap';
 
 export default function Contact() {
 	return (
@@ -15,20 +15,16 @@ export default function Contact() {
 					height: 128,
 				},
 			}}>
-			<Paper style={{ width: '100%', padding: '2%' }} variant='outlined' elevation={3}>
+			<Paper style={{ width: '100%', padding: '2%', height: 'auto' }} variant='outlined' elevation={3}>
 				<h4>Contact</h4>
 				<Row>
 					<Col>
-						<label>Email</label>
-						<Col>
-							<input type='text' id='fname' name='fname' />
-						</Col>
+						<Form.Label htmlFor='inputEmail'>Email</Form.Label>
+						<Form.Control type='text' id='inputEmail' />
 					</Col>
 					<Col>
-						<label>Phone number (optional)</label>
-						<Col>
-							<input type='text' id='lname' name='lname' />
-						</Col>
+						<Form.Label htmlFor='inputNumber'>Phone Number</Form.Label>
+						<Form.Control type='text' id='inputNumber' />
 					</Col>
 				</Row>
 			</Paper>
