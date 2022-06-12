@@ -3,15 +3,21 @@ import React from 'react';
 import GridBootstrap from '../mui_components/GridBootstrap';
 import ResponsiveAppBar from '../mui_components/MenuBar';
 import Results from './Results';
+import { connect } from 'react-redux';
 
-function ShowResultMain() {
+const ShowResultMain = ({ routes }) => {
 	return (
 		<div>
 			<ResponsiveAppBar />
 			<GridBootstrap />
-			<Results />
+			{routes && routes.map((route) => <Results key={route.id} routeData={route} />)}
 		</div>
 	);
-}
+};
+const mapStateToProps = (state) => {
+	return {
+		routes: state.shop.routes,
+	};
+};
 
-export default ShowResultMain;
+export default connect(mapStateToProps)(ShowResultMain);

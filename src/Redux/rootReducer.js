@@ -1,8 +1,7 @@
-import registeredReducer from './registeredReducer';
 import { combineReducers } from 'redux';
+import shopReducer from './Shopping/shopping-reducer';
 
 const rootReducer = combineReducers({
-	registeredReducer: registeredReducer,
+	shop: shopReducer,
 });
-
 export default rootReducer;

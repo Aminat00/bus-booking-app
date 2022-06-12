@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
-function Results() {
+const Results = ({ routeData }) => {
 	return (
 		<div className='results'>
 			<Row className='justify-content-md-center result_header' style={{ height: '80px', border: '1px solid red', padding: '2%' }}>
@@ -15,15 +15,14 @@ function Results() {
 				<Col>
 					<h5>Departure</h5>
 				</Col>
-				<Col>
-					<h5>Duration</h5>
-				</Col>
+
 				<Col>
 					<h5>Arrival</h5>
 				</Col>
 				<Col>
-					<h5>Ratings</h5>
+					<h5>Duration</h5>
 				</Col>
+
 				<Col>
 					<h5>Price</h5>
 				</Col>
@@ -34,23 +33,21 @@ function Results() {
 			<Row className='justify-content-md-center result' style={{ height: '200px', border: '1px solid red', padding: '2%' }}>
 				<Col xs lg='3'>
 					<h5>
-						<strong>Chanakya Travels Agency</strong>
+						<strong>{routeData.agencyName}</strong>
 					</h5>
 				</Col>
 				<Col>
-					<h3>21:30</h3>
+					<h3>{routeData.departTime}</h3>
+				</Col>
+
+				<Col>
+					<h3>{routeData.arriveTime}</h3>
 				</Col>
 				<Col>
-					<h5>17h</h5>
+					<h3>{routeData.duration}</h3>
 				</Col>
 				<Col>
-					<h3>5:20</h3>
-				</Col>
-				<Col>
-					<h3></h3>
-				</Col>
-				<Col>
-					<h3>200$</h3>
+					<h3>{routeData.price}</h3>
 				</Col>
 				<Col>
 					<p>10 seats available</p>
@@ -61,6 +58,6 @@ function Results() {
 			</Row>
 		</div>
 	);
-}
+};
 
 export default Results;

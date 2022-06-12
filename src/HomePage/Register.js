@@ -16,11 +16,7 @@ function Login() {
 	return (
 		<div>
 			<ResponsiveAppBar />
-			{/* {users.map((user) => (
-				<div key={user.id}>
-					{user.name} - {user.email}
-				</div>
-			))} */}
+
 			<Form style={{ margin: '5%' }}>
 				<Form.Group className='mb-3' controlId='formBasicName'>
 					<Form.Label> First Name</Form.Label>
