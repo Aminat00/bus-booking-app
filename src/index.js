@@ -1,16 +1,14 @@
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainContainer from './MainContainer';
-import Payment from './Payment/Payment';
-import ShowResultMain from './ShowResultsPage/ShowResultMain';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './Redux/reducers';
+
+const store = createStore(rootReducer, +window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<BrowserRouter>
-		<Routes>
-			<Route path='/' element={<MainContainer />} />
-			<Route path='ShowResultMain' element={<ShowResultMain />} />
-			<Route path='Payment' element={<Payment />} />
-		</Routes>
-	</BrowserRouter>
+	<Provider store={store}>
+		<MainContainer />
+	</Provider>
 );

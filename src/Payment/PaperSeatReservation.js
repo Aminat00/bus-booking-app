@@ -5,8 +5,10 @@ import { Row, Col } from 'react-bootstrap';
 import FlightClassTwoToneIcon from '@mui/icons-material/FlightClassTwoTone';
 import ArrowForwardIosTwoToneIcon from '@mui/icons-material/ArrowForwardIosTwoTone';
 import Button from 'mui-react/lib/components/Button';
+import { useState } from 'react';
+import Payment from './Payment';
 
-export default function Reservation() {
+export default function Reservation({ setOpen }) {
 	return (
 		<Box
 			sx={{
@@ -20,7 +22,7 @@ export default function Reservation() {
 			}}>
 			<Paper style={{ width: '100%', padding: '2%', height: 'auto' }} variant='outlined' elevation={3}>
 				<h4>Seat Resevation</h4>
-				<Button variant='text' style={{ width: '100%' }}>
+				<Button variant='text' style={{ width: '100%' }} onClick={() => setOpen(true)}>
 					<Row style={{ border: '1px solid darkgray', margin: '10px' }}>
 						<Col>
 							<FlightClassTwoToneIcon style={{ width: '50px', height: '50px' }} />

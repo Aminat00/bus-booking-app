@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,18 +13,21 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from 'react-router-dom';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const ResponsiveAppBar = () => {
-	const { anchorElNav, setAnchorElNav } = (React.useState < null) | (HTMLElement > null);
-	const { anchorElUser, setAnchorElUser } = (React.useState < null) | (HTMLElement > null);
+const logins = ['Login', 'SignUp'];
 
-	const handleOpenNavMenu = (event) => {
+const ResponsiveAppBar = () => {
+	const [anchorElNav, setAnchorElNav] = useState(0);
+	const [anchorElUser, setAnchorElUser] = useState(0);
+
+	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorElNav(event.currentTarget);
 	};
-	const handleOpenUserMenu = (event) => {
+	const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorElUser(event.currentTarget);
 	};
 
@@ -132,9 +136,11 @@ const ResponsiveAppBar = () => {
 							}}
 							open={Boolean(anchorElUser)}
 							onClose={handleCloseUserMenu}>
-							{settings.map((setting) => (
-								<MenuItem key={setting} onClick={handleCloseUserMenu}>
-									<Typography textAlign='center'>{setting}</Typography>
+							{logins.map((login) => (
+								<MenuItem key={login} onClick={handleCloseUserMenu}>
+									<Typography textAlign='center'>
+										<Link to='/Login'>{login}</Link>
+									</Typography>
 								</MenuItem>
 							))}
 						</Menu>
