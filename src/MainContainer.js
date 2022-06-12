@@ -6,6 +6,7 @@ import HomePage from './HomePage/HomePage';
 import Payment from './Payment/Payment';
 import Register from './HomePage/Register';
 import Login from './HomePage/Login';
+import Support from './HomePage/Support';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 export default function MainContainer() {
@@ -18,6 +19,7 @@ export default function MainContainer() {
 					<Route path='Payment' element={<Payment />} />
 					<Route path='Login' element={<Login />} />
 					<Route path='Register' element={<Register />} />
+					<Route path='Support' element={<Support />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

@@ -23,7 +23,7 @@ export default function SimplePaper() {
 						<Form.Control type='text' id='inputFName' />
 					</Col>
 					<Col>
-						<Form.Label htmlFor='inputLName'>Card number</Form.Label>
+						<Form.Label htmlFor='inputLName'>Last Name</Form.Label>
 						<Form.Control type='text' id='inputLName' />
 					</Col>
 				</Row>

@@ -22,10 +22,6 @@
 	display: inline-block;
 }
 
-.datePicker {
-	height: 80%;
-	background-color: tomato;
-}
 .card_container {
 	background-color: rgba(6, 95, 173, 0.605);
 	width: 100%;

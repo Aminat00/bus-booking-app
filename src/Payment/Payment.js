@@ -13,6 +13,7 @@ import Checkbox from '@mui/material/Checkbox';
 import RightBar from './RightBar';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Payment() {
 	const [open, setOpen] = useState(false);
@@ -22,11 +23,14 @@ function Payment() {
 			<Container style={{ padding: '3%' }}>
 				<Row>
 					<Col xs={12} md={8}>
-						<Button variant='text'>
-							<ArrowBackIosIcon /> Back
+						<Button to='/ShowResultMain' variant='text'>
+							<Link to='/ShowResultMain'>
+								<ArrowBackIosIcon />
+								Back
+							</Link>
 						</Button>
 						<SimplePaper />
-						<Reservation setOpen={setOpen}/>
+						<Reservation setOpen={setOpen} />
 						<Contact />
 						<PaperPayment />
 						<RightBar open={open} setOpen={setOpen} />

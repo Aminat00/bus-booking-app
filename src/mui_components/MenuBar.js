@@ -12,13 +12,13 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import DirectionsBusFilledIcon from '@mui/icons-material/DirectionsBusFilled';
 import { Link } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Support'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const logins = ['Login', 'SignUp'];
+const logins = ['Login'];
 
 const ResponsiveAppBar = () => {
 	const [anchorElNav, setAnchorElNav] = useState(0);
@@ -43,7 +43,7 @@ const ResponsiveAppBar = () => {
 		<AppBar position='static'>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
-					<AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+					<DirectionsBusFilledIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 					<Typography
 						variant='h6'
 						noWrap
@@ -58,7 +58,7 @@ const ResponsiveAppBar = () => {
 							color: 'inherit',
 							textDecoration: 'none',
 						}}>
-						LOGO
+						BUZZY TRIP
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -84,12 +84,14 @@ const ResponsiveAppBar = () => {
 							}}>
 							{pages.map((page) => (
 								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign='center'>{page}</Typography>
+									<Typography sx={{ color: 'red' }} textAlign='center'>
+										{page}
+									</Typography>
 								</MenuItem>
 							))}
 						</Menu>
 					</Box>
-					<AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+					<DirectionsBusFilledIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 					<Typography
 						variant='h5'
 						noWrap
@@ -105,12 +107,14 @@ const ResponsiveAppBar = () => {
 							color: 'inherit',
 							textDecoration: 'none',
 						}}>
-						LOGO
+						BUZZY TRIP
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map((page) => (
 							<Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
-								{page}
+								<Link style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }} to='/Support'>
+									{page}
+								</Link>
 							</Button>
 						))}
 					</Box>

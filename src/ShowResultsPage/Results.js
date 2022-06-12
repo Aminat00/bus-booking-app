@@ -2,14 +2,15 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Results = ({ routeData }) => {
+const Results = ({ routes }) => {
 	return (
 		<div className='results'>
-			<Row className='justify-content-md-center result_header' style={{ height: '80px', border: '1px solid red', padding: '2%' }}>
+			<Row className='justify-content-md-center result_header' style={{ height: '80px', padding: '2%', borderBottom: '2px solid gray' }}>
 				<Col xs lg='3'>
 					<h5>
-						<strong>1 Bus found</strong>
+						<strong>Agency Name</strong>
 					</h5>
 				</Col>
 				<Col>
@@ -30,34 +31,44 @@ const Results = ({ routeData }) => {
 					<h5>Seats Available</h5>
 				</Col>
 			</Row>
-			<Row className='justify-content-md-center result' style={{ height: '200px', border: '1px solid red', padding: '2%' }}>
-				<Col xs lg='3'>
-					<h5>
-						<strong>{routeData.agencyName}</strong>
-					</h5>
-				</Col>
-				<Col>
-					<h3>{routeData.departTime}</h3>
-				</Col>
+			{routes &&
+				routes.map((route) => (
+					<Row key={route.id} className='justify-content-md-center result' style={{ height: 'auto', borderBottom: '2px solid gray', padding: '2%' }}>
+						<Col xs lg='3'>
+							<h5>
+								<strong>{route.agencyName}</strong>
+							</h5>
+						</Col>
+						<Col>
+							<h3>{route.departTime}</h3>
+						</Col>
 
-				<Col>
-					<h3>{routeData.arriveTime}</h3>
-				</Col>
-				<Col>
-					<h3>{routeData.duration}</h3>
-				</Col>
-				<Col>
-					<h3>{routeData.price}</h3>
-				</Col>
-				<Col>
-					<p>10 seats available</p>
-					<Button sx={{ height: '30%', fontSize: '100%', backgroundColor: '#c40a0abf', width: '100%', borderRadius: 3 }} variant='contained'>
-						<Link to='/Payment'>Reserve a seat</Link>{' '}
-					</Button>
-				</Col>
-			</Row>
+						<Col>
+							<h3>{route.arriveTime}</h3>
+						</Col>
+						<Col>
+							<h3>{route.duration}</h3>
+						</Col>
+						<Col>
+							<h3>{route.price} €</h3>
+						</Col>
+						<Col>
+							<p>10 seats available</p>
+							<Button sx={{ height: 'auto', fontSize: '100%', width: '120%', borderRadius: 3, marginRight: '8%' }} variant='contained'>
+								<Link style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }} to='/Payment'>
+									RESERVE A SEAT
+								</Link>{' '}
+							</Button>
+						</Col>
+					</Row>
+				))}
 		</div>
 	);
 };
 
-export default Results;
+const mapStateToProps = (state) => {
+	return {
+		routes: state.shop.routes,
+	};
+};
+export default connect(mapStateToProps)(Results);
