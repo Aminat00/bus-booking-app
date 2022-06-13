@@ -1,0 +1,2 @@
+export const DEPOSIT_TO_CART = 'DEPOSIT_TO_CART';
+export const WITHDRAW_FROM_CART = 'WITHDRAW_FROM_CART';

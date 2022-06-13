@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import DirectionsBusFilledIcon from '@mui/icons-material/DirectionsBusFilled';
 import { Link } from 'react-router-dom';
 
-const pages = ['Support'];
+const pages = ['Customer Support'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const logins = ['Login'];

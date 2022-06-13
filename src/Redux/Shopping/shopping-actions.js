@@ -35,3 +35,15 @@ export const loadCurrentItem = (item) => {
 		payload: item,
 	};
 };
+
+export const searchFromData = (itemID, value, value, value) => {
+	return {
+		type: actionTypes.SEARCH_FROM_DATA,
+		payload: {
+			id: itemID,
+			departCity: value,
+			arriveCity: value,
+			date: value,
+		},
+	};
+};

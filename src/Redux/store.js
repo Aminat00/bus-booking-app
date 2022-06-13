@@ -1,7 +1,9 @@
-import { createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from './rootReducer';
+import { configureStore } from '@reduxjs/toolkit';
+import routeSlice from './Routes/routeSlice';
+import routesReducer from './Routes/routeSlice';
 
-const store = createStore(rootReducer, composeWithDevTools());
-
-export default store;
+export const store = configureStore({
+	reducer: {
+		routes: routesReducer,
+	},
+});

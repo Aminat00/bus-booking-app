@@ -24,7 +24,7 @@ function RightBar({ open, setOpen }) {
 				<h2>Seat Reservation</h2>
 			</Row>
 			<Row style={{ textAlign: 'center' }}>
-				<p>Makkah-Madeenah</p>
+				<p>Berlin-Munich</p>
 			</Row>
 			<Row>
 				<SeatPicker />
