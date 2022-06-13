@@ -36,14 +36,25 @@ export const loadCurrentItem = (item) => {
 	};
 };
 
-export const searchFromData = (itemID, value, value, value) => {
-	return {
-		type: actionTypes.SEARCH_FROM_DATA,
-		payload: {
-			id: itemID,
-			departCity: value,
-			arriveCity: value,
-			date: value,
-		},
-	};
-};
+// export const searchFromData = (itemID, value, value, value) => {
+// 	return {
+// 		type: actionTypes.SEARCH_FROM_DATA,
+// 		payload: {
+// 			id: itemID,
+// 			departCity: value,
+// 			arriveCity: value,
+// 			date: value,
+// 		},
+// 	};
+// };
+
+// export const listItems = (itemID, departTime, arriveTime, duration, price, seatNo) => {
+// 	return {
+// 		type: actionTypes.LIST_ITEMS,
+// 		payload: {
+// 			id: itemID,
+// 			depart: departTime,
+// 			arrive: arriveTime,
+// 		},
+// 	};
+// };
