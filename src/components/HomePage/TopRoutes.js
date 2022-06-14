@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/mainpage.css';
+import '../../assets/styles/mainpage.css';
 
 function TopRoutes() {
 	return (

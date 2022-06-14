@@ -5,7 +5,7 @@
 
 .header {
 	width: 100%;
-	background-image: url('/src/images/bg.jpg');
+	background-image: url('/src/assets/images/bg.jpg');
 	background-position: center;
 	background-size: cover;
 	height: 730px;
@@ -45,6 +45,7 @@
 
 .toproutes .toproutes_container li {
 	list-style: none;
+	background-color: rgba(147, 199, 244, 0.453);
 }
 
 .footer {

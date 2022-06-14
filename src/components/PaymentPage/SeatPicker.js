@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaAngleDoubleDown } from 'react-icons/fa';
-import '../styles/SeatPicker.css';
+import '../../assets/styles/SeatPicker.css';
 
 export default function SeatPicker() {
 	const [fname, setFName] = useState([]);

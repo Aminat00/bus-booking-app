@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/mainpage.css';
-import promo from '../images/promo.webp';
+import '../../assets/styles/mainpage.css';
+import promo from '../../assets/images/promo.webp';
 
 export default function Offers() {
 	return (

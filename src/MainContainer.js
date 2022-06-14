@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './App.css';
-import ShowResultMain from './ShowResultsPage/ShowResultMain';
-import HomePage from './HomePage/HomePage';
-import Payment from './Payment/Payment';
-import Register from './HomePage/Register';
-import Login from './HomePage/Login';
-import Support from './HomePage/Support';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import './assets/styles/App.css';
+import ShowResultMain from './components/ShowResultsPage/ShowResultMain';
+import HomePage from './components/HomePage/HomePage';
+import Payment from './components/PaymentPage/Payment';
+import Register from './components/HomePage/Register';
+import Login from './components/HomePage/Login';
+import Support from './components/HomePage/Support';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function MainContainer() {
 	return (
